@@ -31,9 +31,9 @@ class Login extends Component {
 
     getAction = action => {
         if(action === 'reg'){
-            this.setState({formTitle: 'Register New User', loginBtn: false});
+            this.setState({formTitle: 'Register New User', loginBtn: false, fireErrors: ''});
         }else{
-            this.setState({formTitle: 'Login', loginBtn: true});
+            this.setState({formTitle: 'Login', loginBtn: true, fireErrors: ''});
         }
     }
 
