@@ -8,6 +8,8 @@ const config = {
     storageBucket: "vicrus-db9d6.appspot.com",
     messagingSenderId: "556955009755",
     appId: "1:556955009755:web:0be23fcee30ab1e0"
+
+    
 };
 
 const fire = firebase.initializeApp(config);
