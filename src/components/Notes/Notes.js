@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import Note from './Note/Note';
+import AddNewNote from './AddNewNote/AddNewNote';
+import './Notes.css';
 
 class Notes extends Component {
 
@@ -7,8 +9,7 @@ class Notes extends Component {
         super(props);
         this.state = {
             notes: [
-                {id: 1, content: 'The first Note'},
-                {id: 2, content: 'The second Note'}
+                {id: 1, content: 'My first Note'}
             ]
         }
     }
@@ -23,7 +24,8 @@ class Notes extends Component {
 
     render(){
         return (
-            <div>
+            <div className="notesApp">
+                <h2>My Notes</h2>
                 {
                     this.state.notes.map((note) => {
                         return (
@@ -33,6 +35,7 @@ class Notes extends Component {
                         )
                     })
                 }
+                <AddNewNote addNote={this.addNewNote} />
             </div>
         );
     }
