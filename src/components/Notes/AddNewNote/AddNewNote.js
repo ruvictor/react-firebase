@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import fire from '../../../config/Fire';
 
 class AddNewNote extends Component {
 
@@ -23,6 +24,10 @@ class AddNewNote extends Component {
         });
     }
 
+    logout = () => {
+        fire.auth().signOut();
+    }
+
     render() {
         return (
             <div className="addNoteField">
@@ -34,6 +39,7 @@ class AddNewNote extends Component {
                 <button 
                     className="addNoteBtn"
                     onClick={this.addNote}>Add Note</button>
+                <button className="logOutBtn" onClick={this.logout}>Logout</button>
             </div>
         )
     }

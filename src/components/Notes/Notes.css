@@ -37,7 +37,19 @@
     border: none;
     padding: 10px;
     display: block;
-    width: 100%;
+    width: 50%;
+    float: left;
     color: #fff;
     background-color: #3d8577;
+    border-right: 1px solid #fff;
+}
+
+.logOutBtn {
+    border: none;
+    padding: 10px;
+    display: block;
+    float: left;
+    width: 50%;
+    color: #fff;
+    background-color: #314e48;
 }
