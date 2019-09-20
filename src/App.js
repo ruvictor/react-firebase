@@ -9,12 +9,18 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      user: null
+      user: null,
+      loading: true
     }
   }
 
   componentDidMount(){
     this.authListener();
+    setTimeout(function() {
+      this.setState({
+        loading: false
+      });
+    }.bind(this), 1000);
   }
 
   authListener(){
@@ -28,6 +34,9 @@ class App extends Component {
   }
 
   render(){
+    if (this.state.loading){
+        return <p>Loading...</p>;
+    }
     return (
         <div>
           {this.state.user ? (<Home />) : (<Login />)}
