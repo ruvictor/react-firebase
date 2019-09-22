@@ -6,7 +6,7 @@ class AddNewNote extends Component {
     constructor(props){
         super(props);
         this.state = {
-            newContent: ''
+            newNoteContent: ''
         }
     }
 
@@ -14,10 +14,10 @@ class AddNewNote extends Component {
         this.setState({
             newNoteContent: e.target.value
         });
-        console.log(this.state.newNoteContent);
+        // console.log(this.state.newNoteContent);
     }
 
-    addNote = (props) => {
+    addNote = () => {
         this.props.addNote(this.state.newNoteContent);
         this.setState({
             newNoteContent: ''
