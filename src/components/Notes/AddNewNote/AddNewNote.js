@@ -17,10 +17,13 @@ class AddNewNote extends Component {
     }
 
     addNote = () => {
-        this.props.addNote(this.state.newNoteContent);
-        this.setState({
-            newNoteContent: ''
-        });
+        // check if our new note is empty or not
+        if(this.state.newNoteContent.trim()){
+            this.props.addNote(this.state.newNoteContent);
+            this.setState({
+                newNoteContent: ''
+            });
+        }
     }
 
     logout = () => {

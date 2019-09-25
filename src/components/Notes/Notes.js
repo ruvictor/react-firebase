@@ -43,7 +43,7 @@ class Notes extends Component {
         this.setState({
             notes: BackUpState
         })
-        console.log(this.state);
+        // console.log(this.state);
     }
 
     componentDidMount(){
