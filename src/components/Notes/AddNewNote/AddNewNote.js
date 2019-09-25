@@ -14,7 +14,6 @@ class AddNewNote extends Component {
         this.setState({
             newNoteContent: e.target.value
         });
-        // console.log(this.state.newNoteContent);
     }
 
     addNote = () => {

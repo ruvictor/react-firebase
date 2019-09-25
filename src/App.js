@@ -3,6 +3,7 @@ import fire from './config/Fire';
 import Login from './components/LoginRegister';
 import Home from './components/Home';
 import './App.css';
+import Spinner from './assets/loader.gif';
 
 class App extends Component {
 
@@ -35,7 +36,10 @@ class App extends Component {
 
   render(){
     if (this.state.loading){
-        return <p>Loading...</p>;
+        return (
+          <div className="Spinner">
+            <img src={Spinner} alt="Spinner" />
+          </div>);
     }
     return (
         <div>
